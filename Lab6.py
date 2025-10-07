@@ -6,8 +6,10 @@ def initialize_board(num_rows, num_cols):
 def print_board(board):
     for i in range(len(board)-1, -1, -1):
         for j in range(len(board[i])):
-            print(board[i][j], end=" ")
-        print()
+            if j == len(board[i])-1:
+                print(board[i][j])
+            else:
+                print(board[i][j], end=" ")
 
 def insert_chip(board, col, chip_type):
     for i in range(len(board)):
@@ -42,6 +44,7 @@ def main ():
     cols = int(input("What would you like the length of the board to be? "))
 
     board = initialize_board(rows, cols)
+
     print_board(board)
 
     player1_chip = "x"
