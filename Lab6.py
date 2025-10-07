@@ -54,12 +54,12 @@ def main ():
     print(f"Player 2: {player2_chip}")
 
     while True:
-        col_player1 = int(input("\nPlayer 1: Which column would you like to choose? "))
+        col_player1 = int(input("\nPlayer 1: Which column would you like to choose?"))
         row_player1 = insert_chip(board, col_player1, player1_chip)
         print_board(board)
 
         if check_if_winner(board, col_player1, row_player1, player1_chip):
-            print("\nPlayer 1 won!")
+            print("\nPlayer 1 won the game!")
             break
 
         count = 0
@@ -73,12 +73,12 @@ def main ():
             print("\nDraw. Nobody wins.")
             break
 
-        col_player2 = int(input("\nPlayer 2: Which column would you like to choose? "))
+        col_player2 = int(input("\nPlayer 2: Which column would you like to choose?"))
         row_player2 = insert_chip(board, col_player2, player2_chip)
         print_board(board)
 
         if check_if_winner(board, col_player2, row_player2, player2_chip):
-            print("\nPlayer 2 won!")
+            print("\nPlayer 2 won the game!")
             break
 
         count = 0
